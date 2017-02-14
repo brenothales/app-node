@@ -1,0 +1,22 @@
+extends layout
+
+
+block content
+	form.navbar-fixed-top
+		nav.navbar.navbar-default.navtop.navbar-fixed-top
+			.container-fluid
+				.navbar-header
+				.container
+					.input-group
+						span.input-group-btn
+							span.btn.btn-warning {{ todos.length }}
+						input.form-control(ng-model='formData.text', autocomplete='off', placeholder='Lembretes', ng-focus='searchFocus = true', ng-blur='searchFocus = false', ng-required='true', required)
+						span.input-group-btn
+							button.btn.btn-default(type='submit', ng-click='createTodo()')
+								i.fa.fa-plus.fa-1x(aria-hidden='true')
+	#todo-list
+		ul.fly-reverse
+			li(ng-class='pass ', ng-repeat="todo in todos | filter:formData.text | orderBy:'-_id' ")
+				input(id='cbtest_{{todo._id}}', type='checkbox', ng-click='deleteTodo(todo._id)')
+				label.check-box(for='cbtest_{{todo._id}}')
+				span {{ todo.text }}

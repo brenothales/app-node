@@ -1,0 +1,450 @@
+section {
+  display: inline-block;
+  width: 100%; }
+
+ul {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  list-style: none;
+  perspective: 400px; }
+  ul li {
+    position: relative;
+    background: #eee;
+    color: #252525;
+    font-size: 14px;
+    z-index: 2;
+    padding: 1em 0 1em 2em;
+    transform: translateZ(0px);
+    text-align: left;
+    /*flex-grow:1;*/
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
+    transition: all .2s ease-out; }
+    ul li:nth-last-child(50n + 1) {
+      background: #e61a1a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 2) {
+      background: #e6321a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 3) {
+      background: #e64a1a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 4) {
+      background: #e6631a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 5) {
+      background: #e67b1a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 6) {
+      background: #e6941a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 7) {
+      background: #e6ac1a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 8) {
+      background: #e6c51a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 9) {
+      background: #e6dd1a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 10) {
+      background: #d5e61a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 11) {
+      background: #bde61a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 12) {
+      background: #a4e61a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 13) {
+      background: #8ce61a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 14) {
+      background: #73e61a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 15) {
+      background: #5be61a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 16) {
+      background: #42e61a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 17) {
+      background: #2ae61a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 18) {
+      background: #1ae622;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 19) {
+      background: #1ae63a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 20) {
+      background: #1ae653;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 21) {
+      background: #1ae66b;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 22) {
+      background: #1ae684;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 23) {
+      background: #1ae69c;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 24) {
+      background: #1ae6b5;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 25) {
+      background: #1ae6cd;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 26) {
+      background: #1ae6e6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 27) {
+      background: #1acde6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 28) {
+      background: #1ab5e6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 29) {
+      background: #1a9ce6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 30) {
+      background: #1a84e6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 31) {
+      background: #1a6be6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 32) {
+      background: #1a53e6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 33) {
+      background: #1a3ae6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 34) {
+      background: #1a22e6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 35) {
+      background: #2a1ae6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 36) {
+      background: #421ae6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 37) {
+      background: #5b1ae6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 38) {
+      background: #731ae6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 39) {
+      background: #8c1ae6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 40) {
+      background: #a41ae6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 41) {
+      background: #bd1ae6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 42) {
+      background: #d51ae6;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 43) {
+      background: #e61add;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 44) {
+      background: #e61ac5;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 45) {
+      background: #e61aac;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 46) {
+      background: #e61a94;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 47) {
+      background: #e61a7b;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 48) {
+      background: #e61a63;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 49) {
+      background: #e61a4a;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:nth-last-child(50n + 50) {
+      background: #e61a32;
+      /*color: hsl(($i - 1)*($color / $color-frequency), 80%, 50%);*/
+      color: white; }
+    ul li:hover {
+      background-color: #383030;
+      color: white; }
+    ul li span {
+      display: inline;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.2em;
+      text-shadow: 1px 1px 5px rgba(64, 64, 64, 0.8);
+      margin-left: 9px; }
+
+.fly-reverse {
+  perspective: 400px;
+  perspective-origin: 50% 50%; }
+  .fly-reverse li {
+    transition: all 600ms ease, opacity 300ms ease;
+    transform-origin: 50% 50% -50px; }
+    .fly-reverse li.past {
+      opacity: 0;
+      transform: rotateX(-180deg); }
+    .fly-reverse li.future {
+      opacity: 0;
+      transform: rotateX(180deg); }
+
+/* Made by Jimmy Gillam */
+/* Checkmark style starts */
+@-moz-keyframes dothabottomcheck {
+  0% {
+    height: 0; }
+  100% {
+    height: 12.5px; } }
+
+@-webkit-keyframes dothabottomcheck {
+  0% {
+    height: 0; }
+  100% {
+    height: 12.5px; } }
+
+@keyframes dothabottomcheck {
+  0% {
+    height: 0; }
+  100% {
+    height: 12.5px; } }
+
+@keyframes dothatopcheck {
+  0% {
+    height: 0; }
+  50% {
+    height: 0; }
+  100% {
+    height: 30px; } }
+
+@-webkit-keyframes dothatopcheck {
+  0% {
+    height: 0; }
+  50% {
+    height: 0; }
+  100% {
+    height: 30px; } }
+
+@-moz-keyframes dothatopcheck {
+  0% {
+    height: 0; }
+  50% {
+    height: 0; }
+  100% {
+    height: 30px; } }
+
+input[type=checkbox] {
+  display: none; }
+
+.check-box {
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 2.5px solid white;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: border-color ease 0.15s;
+  -o-transition: border-color ease 0.15s;
+  -webkit-transition: border-color ease 0.15s;
+  transition: border-color ease 0.15s;
+  cursor: pointer;
+  vertical-align: middle; }
+  .check-box::before, .check-box::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    height: 0;
+    width: 5px;
+    background-color: #34b93d;
+    display: inline-block;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-radius: 5px;
+    content: ' ';
+    -webkit-transition: opacity ease .5;
+    -moz-transition: opacity ease .5;
+    transition: opacity ease .5; }
+  .check-box::before {
+    top: 18px;
+    left: 10.25px;
+    /*box-shadow: 0 0 0 $checkbox-height * .05 $background-color;*/
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg); }
+  .check-box::after {
+    top: 9.25px;
+    left: 1.25px;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+
+input[type=checkbox]:checked + .check-box,
+.check-box.checked {
+  border-color: #34b93d; }
+  input[type=checkbox]:checked + .check-box::after,
+  .check-box.checked::after {
+    height: 12.5px;
+    -moz-animation: dothabottomcheck 0.15s ease 0s forwards;
+    -o-animation: dothabottomcheck 0.15s ease 0s forwards;
+    -webkit-animation: dothabottomcheck 0.15s ease 0s forwards;
+    animation: dothabottomcheck 0.15s ease 0s forwards; }
+  input[type=checkbox]:checked + .check-box::before,
+  .check-box.checked::before {
+    height: 30px;
+    -moz-animation: dothatopcheck 0.3s ease 0s forwards;
+    -o-animation: dothatopcheck 0.3s ease 0s forwards;
+    -webkit-animation: dothatopcheck 0.3s ease 0s forwards;
+    animation: dothatopcheck 0.3s ease 0s forwards; }
+
+.navtop {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  height: 56px;
+  background: #4285f4; }
+
+form {
+  transition: all linear 0.5s;
+  background: #2e7d32;
+  height: 56px; }
+  form .form-control {
+    background: #2e7d32;
+    border-color: #30b537;
+    transition: all linear 0.5s; }
+    form .form-control:focus {
+      border-color: #40b946;
+      outline: 0;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #31ab38;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #31ab38; }
+  form .btn-warning {
+    color: #fff;
+    background-color: rgba(51, 154, 57, 0.81);
+    border-color: #30b537;
+    font-weight: bold;
+    transition: all linear 0.5s; }
+  form .btn-default {
+    color: white;
+    background-color: rgba(51, 154, 57, 0.81);
+    border-color: #30b537;
+    transition: all linear 0.5s; }
+
+form.ng-invalid {
+  background: #4285f4;
+  height: 56px;
+  transition: all linear 0.5s; }
+  form.ng-invalid .form-control {
+    border: 1px solid #2b64c1;
+    background: #2b64c1; }
+    form.ng-invalid .form-control:focus {
+      border-color: #66afe9;
+      outline: 0;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+  form.ng-invalid .btn-warning {
+    color: #fff;
+    background-color: rgba(43, 100, 193, 0.63);
+    border-color: #2b64c1;
+    font-weight: bold;
+    transition: all linear 0.5s; }
+  form.ng-invalid .btn-default {
+    color: white;
+    background-color: #2b64c1;
+    border-color: #2b64c1;
+    transition: all linear 0.5s; }
+
+#todo-list {
+  margin-top: 56px; }
+
+.navbar-default {
+  border: none;
+  border-radius: 0;
+  background: transparent; }
+
+.navbar {
+  margin-bottom: 1210px;
+  padding-top: 10px; }
+
+.navbar-center {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  background: red; }
+
+.form-control {
+  color: #fff;
+  background-color: #2b64c1;
+  border: 1px solid #2b64c1; }
+
+.btn-default:hover {
+  color: #fff;
+  background-color: #2b64c1;
+  border-color: #2b64c1; }

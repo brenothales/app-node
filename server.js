@@ -20,13 +20,14 @@
   app.use(methodOverride());
 
 
-// define model =================
+  // define model =================
   var Todo = mongoose.model('Todo', {
       text : String
   });
 
 
-// routes ======================================================================
+
+  // routes ======================================================================
 
     // api ---------------------------------------------------------------------
     // get all todos
@@ -83,10 +84,13 @@
 
 
 
-
-
-
-
   // listen (start app with node server.js) ======================================
   app.listen(3000);
+
+  // application -------------------------------------------------------------
+    app.use(express.static('public'));
+    app.get('/', function(req, res) { // colocando * retorna a home public/index.html
+        res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+    });
+
   console.log("App listening on port 3000");
