@@ -210,7 +210,7 @@ terminal:!0});O.angular.bootstrap?console.log("WARNING: Tried to load angular mo
 //# sourceMappingURL=angular.min.js.map
 
 
-var lagoaSoft = angular.module('lagoaSoft', []);
+var scotchTodo = angular.module('lagoaSoft', []);
 
 function mainController($scope, $http) {
     $scope.formData = {};

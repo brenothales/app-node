@@ -18,9 +18,7 @@
   app.set('view engine', 'jade');
 
   // model =================
-  var Todo = mongoose.model('Todo', {
-      text : String
-  });
+  var Todo = mongoose.model('Todo', {text : String });
    
     
     app.get('/api/todos', function(req, res) {

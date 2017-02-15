@@ -1,5 +1,5 @@
 
-var scotchTodo = angular.module('lagoaSoft', []);
+var lagoaSoft = angular.module('lagoaSoft', []);
 
 function mainController($scope, $http) {
     $scope.formData = {};
