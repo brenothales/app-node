@@ -209,44 +209,119 @@ function(a){var c={addOption:C,removeOption:C};return{restrict:"E",priority:100,
 terminal:!0});O.angular.bootstrap?console.log("WARNING: Tried to load angular more than once."):((Ga=O.jQuery)?(y=Ga,D(Ga.fn,{scope:Ja.scope,isolateScope:Ja.isolateScope,controller:Ja.controller,injector:Ja.injector,inheritedData:Ja.inheritedData}),Ab("remove",!0,!0,!1),Ab("empty",!1,!1,!1),Ab("html",!1,!1,!0)):y=N,Ea.element=y,Zc(Ea),y(U).ready(function(){Wc(U,$b)}))})(window,document);!angular.$$csp()&&angular.element(document).find("head").prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>');
 //# sourceMappingURL=angular.min.js.map
 
+'use strict';
+angular.module('lagoaSoft', ['todoController', 'todoService'])
 
-var lagoaSoft = angular.module('lagoaSoft', []);
 
-function mainController($scope, $http) {
-    $scope.formData = {};
-    
-    $http.get('/api/todos')
-        .success(function(data) {
-            $scope.todos = data;
-            console.log(data);
-        })
-        .error(function(data) {
-            console.log('Error: ' + data);
+angular.module('todoService', [])
+
+.factory('Todos', function($http, $q) {
+    return {
+        get : function() {
+            return $http.get('/api/todos');
+        },
+        create : function(todoData) {
+            return $http.post('/api/todos', todoData);
+        },
+        delete : function(id) {
+            return $http.delete('/api/todos/' + id);
+        },
+
+        fetch : function(){
+            $http.get("https://www.omdbapi.com/?t=" + $q.search + "&tomatoes=true&plot=full")
+                .then(function(response) {
+                    $q.details = response.data;
+                 });
+
+            $http.get("https://www.omdbapi.com/?s=" + $q.search)
+                .then(function(response) {
+                    $q.related = response.data;
+                });
+        },
+
+        getData : function(languages) {
+            var  promises;
+            promises = $q.all([
+                $http.get('https://api.github.com/search/repositories?q=tetris+language:Ruby&sort=stars&order=desc'),
+                $http.get('https://api.github.com/search/repositories?q=tetris+language:ruby&sort=stars&order=desc')
+            ]);
+            return promises.then(function (allDatas) {
+                var result = [];
+                angular.forEach(allDatas, function(allData) {
+                result = result.concat(allData.result);
+              });
+                return result;
+            });
+        }
+
+    }
+});
+
+'use strict';
+angular.module('todoController', [])
+.controller('mainController', ['$scope','$http','Todos', function($scope, $http, Todos) {
+		$scope.formData = {};
+		$scope.loading = true;
+
+		// GET
+		Todos.get()
+			.success(function(data) {
+				$scope.todos = data;
+				$scope.loading = false;
+			});
+
+
+		$scope.createTodo = function() {
+
+			// validate
+			if ($scope.formData.text != undefined) {
+				$scope.loading = true;
+				// (returns a promise object)
+				Todos.create($scope.formData)
+					// if successful creation, call our get function to get all the new todos
+					.success(function(data) {
+						$scope.loading = false;
+						$scope.formData = {};
+						$scope.todos = data;
+					});
+			}
+		};
+
+		$scope.deleteTodo = function(id) {
+			$scope.loading = true;
+			Todos.delete(id)
+				.success(function(data) {
+					$scope.loading = false;
+					$scope.todos = data;
+				});
+		};
+}])
+
+
+.controller('MovieController', function($scope, $http) {
+    $scope.$watch('formData', function() {
+      fetch();
+    });
+
+    $scope.formData = "Game of Thrones";
+
+    function fetch() {
+      $http.get("https://www.omdbapi.com/?t=" + $scope.formData + "&tomatoes=true&plot=full")
+        .then(function(response) {
+          $scope.details = response.data;
         });
 
+      $http.get("https://www.omdbapi.com/?s=" + $scope.formData)
+        .then(function(response) {
+          $scope.related = response.data;
+        });
+    }
 
-    $scope.createTodo = function() {
-        $http.post('/api/todos', $scope.formData)
-            .success(function(data) {
-                $scope.formData = {}; 
-                $scope.todos = data;
-                console.log(data);
-            })
-            .error(function(data) {
-                console.log('Error: ' + data);
-            });
+    $scope.update = function(movie) {
+      $scope.formData = movie.Title;
     };
 
-
-    $scope.deleteTodo = function(id) {
-        $http.delete('/api/todos/' + id)
-            .success(function(data) {
-                $scope.todos = data;
-                console.log(data);
-            })
-            .error(function(data) {
-                console.log('Error: ' + data);
-            });
-    };
-
-}
+    $scope.select = function() {
+      this.setSelectionRange(0, this.value.length);
+    }
+  });

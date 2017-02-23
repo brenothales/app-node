@@ -395,6 +395,14 @@ form {
     background-color: rgba(51, 154, 57, 0.81);
     border-color: #30b537;
     transition: all linear 0.5s; }
+    form .btn-default:hover {
+      color: white;
+      background-color: rgba(51, 154, 57, 0.81);
+      border-color: #30b537; }
+    form .btn-default:active {
+      color: white;
+      background-color: rgba(51, 154, 57, 0.81);
+      border-color: #30b537; }
 
 form.ng-invalid {
   background: #4285f4;
@@ -421,7 +429,7 @@ form.ng-invalid {
     transition: all linear 0.5s; }
 
 #todo-list {
-  margin-top: 56px; }
+  margin-top: 36px; }
 
 .navbar-default {
   border: none;
@@ -444,7 +452,58 @@ form.ng-invalid {
   background-color: #2b64c1;
   border: 1px solid #2b64c1; }
 
-.btn-default:hover {
-  color: #fff;
-  background-color: #2b64c1;
-  border-color: #2b64c1; }
+body {
+  background-color: #f3f3f3; }
+
+span.app-name {
+  color: white;
+  font-size: 2em;
+  text-align: left;
+  float: right;
+  margin-top: -4px; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff !important;
+  margin-top: -7px; }
+
+body {
+  background-color: #f3f3f3; }
+
+.container.body {
+  margin-top: 68px; }
+  .container.body a {
+    color: #0f9d58; }
+  .container.body a.btn.btn-default.btn-xs.btn-info {
+    color: white; }
+  .container.body .list-group-item {
+    color: lightgray;
+    background-color: #fff;
+    border: 1px solid #ddd; }
+
+.filme-info {
+  background: white;
+  padding: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28); }
+  .filme-info img {
+    width: 100%; }
+
+h3.oops {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 150px;
+  color: #cdcdcd;
+  position: relative;
+  transition: all 0.5s;
+  text-shadow: 4px 2px 17px rgba(194, 194, 194, 0.72);
+  text-align: center; }
+
+.oops {
+  text-align: center;
+  font-size: 17px;
+  color: #9a9797; }
+
+@media only screen and (max-width: 480px) {
+  div#wrapper {
+    width: 400px; }
+  .col-md-2.logo {
+    margin-top: -42px !important; } }

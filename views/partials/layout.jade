@@ -1,0 +1,15 @@
+doctype html
+html(ng-app='lagoaSoft')
+  include head
+  include navbar
+  body(ng-controller='#{controller}')
+    noscript
+      .nojs
+        | Javascript está desativado ou não é suportado no seu navegador. Ative-o ou use um navegador habilitado para JavaScript.
+    block content
+
+  script(src='assets/js/scroll.js')
+  script(src='assets/js/strollBind.js')
+
+
+    

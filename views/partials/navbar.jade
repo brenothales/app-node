@@ -1,0 +1,18 @@
+form.navbar-fixed-top
+	nav.navbar.navbar-default.navtop.navbar-fixed-top
+		.container-fluid
+			.navbar-header
+			.row
+				.logo.col-md-2
+					span.app-name
+						i.fa.fa-handshake-o 
+							| LagoaSoft
+				.col-md-8 
+					.input-group
+						span.input-group-btn
+							span.btn.btn-warning {{ #{count}.length }}
+						input.form-control(ng-model='#{model}' autocomplete='off', placeholder='Lembretes', ng-focus='searchFocus = true', ng-blur='searchFocus = false', ng-required='true', required)
+						span.input-group-btn
+							button.btn.btn-default(type='submit', ng-click='createTodo()')
+								i.fa.fa-plus.fa-1x(aria-hidden='true')
+							include menu

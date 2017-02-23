@@ -1,1 +1,1 @@
-function updateHeight(){list.style.height=window.innerHeight+"px",stroll.bind("ul")}var list=document.querySelector("ul"),type=window.location.search.slice(1)||"fly-reverse";list.className=type,window.addEventListener("resize",updateHeight,!1),updateHeight();
+function updateHeight(){list.style.height=window.innerHeight+"px",stroll.bind("ul.fly-reverse")}var list=document.querySelector("ul.fly-reverse"),type=window.location.search.slice(1)||"fly-reverse";list.className=type,window.addEventListener("resize",updateHeight,!1),updateHeight();

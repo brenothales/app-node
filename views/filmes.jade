@@ -1,0 +1,60 @@
+extends partials/layout
+
+
+block content
+  .container.body
+    .animated.zoomInRight
+      .col-md-4
+        .filme-info(ng-if="details.Response==='True'")
+          div(ng-if='!details')
+            | Carregando resultados...
+          div(ng-if="details.Response==='True'")
+            img.animated.flip.movie-poster(ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}")
+      .col-md-4
+        div.filme-info(ng-if="details.Response==='True'")
+          span.span-outer
+            h2 
+              a(href='http://imdb.com/title/{{ details.imdbID }}', target='_blank') {{ details.Title }}
+            | , {{ details.Year }}
+          p
+            strong Lançado em:
+            |  {{ details.Released }} ({{ details.Runtime }})
+          p {{ details.Plot }}
+          p.outer-p
+            .inner-p
+              span.label.label-primary Diretores :
+              |  {{ details.Director }}
+            .inner-p
+              span.label.label-primary Atores :
+              |  {{ details.Actors }}
+            .inner-p
+              span.label.label-primary Gênero :
+              |  {{ details.Genre }}
+          p.outer-p-2
+            | Avaliações:
+            br
+            strong IMDb Avaliação
+            | :
+            span.label.label-success {{ details.imdbRating }}
+            br
+            strong Rotten Tomates
+            | :
+            span.label.label-success {{ details.tomatoRating }}
+          p.outer-p-3
+            a.btn.btn-default.btn-xs.btn-info(ng-href='https://www.youtube.com/results?search_query={{ details.Title }}', target='_blank') Assistir Trailers!
+            span.divider
+            a.btn.btn-default.btn-xs.btn-info(ng-href='http://subscene.com/subtitles/title?q={{ details.Title }}', target='_blank') Obtenha legendas!
+            span.divider
+            a.btn.btn-default.btn-xs.btn-info(ng-href='http://www.theost.com/search/custom/?key={{ details.Title }}', target='_blank') Ouvir trilhas sonoras!
+            span.divider
+            a.btn.btn-default.btn-xs.btn-info(ng-href='http://www.amazon.in/s/ref=nb_sb_noss_1?url=search-alias%3Ddvd&field-keywords={{ details.Title }}', target='_blank') Comprar!
+        div(ng-if="details.Response==='False'")
+          h3.oops| Oops!          
+          .oops| Nenhum resultado encontrado.          
+      //- final              
+      #related-results.col-md-4.animated.bounce.related-results
+        div(ng-if="related.Response!=='False'")
+          ul.list-group
+            li.list-group-item(ng-repeat='movie in related.Search')
+              a(href='#', id='{{ $index + 1 }}', ng-click='update(movie)') {{ movie.Title }}
+              | , {{ movie.Year }}
